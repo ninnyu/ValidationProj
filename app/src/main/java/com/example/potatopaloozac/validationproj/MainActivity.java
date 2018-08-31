@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText username, password, email, dob;
     Button ub, pb, eb, db;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

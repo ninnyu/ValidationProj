@@ -8,10 +8,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 import java.util.regex.*;
 
+/**
+ * This is Mikki's Review.
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     EditText username, password, email, dob;
     Button ub, pb, eb, db;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

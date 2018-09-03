@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mybackground"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
@@ -11,87 +12,114 @@
         android:id="@+id/username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11dp"
         android:ems="10"
         android:hint="ENTER USERNAME"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toStartOf="@+id/submit_user"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="ENTER PASSWORD"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toStartOf="@+id/submit_password"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/submit_user" />
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <EditText
         android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="ENTER EMAIL ADDRESS"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/dateofbirth"
+        app:layout_constraintEnd_toStartOf="@+id/submit_email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/submit_password" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <EditText
         android:id="@+id/dateofbirth"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="106dp"
-        android:layout_marginTop="107dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="DOB (MM/DD/YYYY)"
         android:inputType="textPersonName"
+        android:textColorHint="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/submit_dob"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/submit_email" />
-
-    <Button
-        android:id="@+id/submit_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="60dp"
-        android:text="Validate Username"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/submit_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="44dp"
-        android:text="Validate Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/password" />
-
-    <Button
-        android:id="@+id/submit_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="Validate email"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <Button
+        android:id="@+id/submit_user"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Validate \n Username"
+        app:layout_constraintBottom_toTopOf="@+id/submit_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/username"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/submit_password"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="16dp"
+        android:text="Validate \n Password"
+        app:layout_constraintBottom_toTopOf="@+id/submit_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/submit_user" />
+
+    <Button
+        android:id="@+id/submit_email"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginEnd="16dp"
+        android:text="Validate \n email"
+        app:layout_constraintBottom_toTopOf="@+id/submit_dob"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/submit_password" />
+
+    <Button
         android:id="@+id/submit_dob"
-        android:layout_width="wrap_content"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="Validate DoB"
+        android:text="Validate \n Date of Birth"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateofbirth" />
+        app:layout_constraintStart_toEndOf="@+id/dateofbirth"
+        app:layout_constraintTop_toBottomOf="@+id/submit_email" />
+
 </android.support.constraint.ConstraintLayout>

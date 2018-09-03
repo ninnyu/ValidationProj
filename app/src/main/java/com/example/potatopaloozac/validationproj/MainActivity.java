@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean validateEmail(String s) {
-        Pattern pattern = Pattern.compile("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+        Pattern pattern = Pattern.compile("^[a-zA-z0-9_-]+(\\.[a-zA-z0-9_-]+)*@[a-zA-z0-9_-]+(\\.[a-zA-z0-9]+)*(\\.[a-zA-z]{2,})$");
         return pattern.matcher(s).matches();
     }
 

@@ -9,7 +9,17 @@ import android.widget.Toast;
 import java.util.regex.*;
 
 /**
- * This is Mikki's Review.
+ * Dragos Review
+ * code:
+ * - variables should be renamed as more intelligible to what they stand for
+ * - break the code to be easy to modify like final REGEX definitions
+ * - add a textView with the description of the accepted field formats so the user can follow
+ * UI:
+ * - bad contrast, it is hard to read the widgets purpose
+ * - errors should be more descriptive (what is the type of a valid password?)
+ * - rework of the UI in an more pleasant/ergonomic flow
+ * - (UI is the most important connection with the user)...
+ *
  */
 
 public class MainActivity extends AppCompatActivity {
